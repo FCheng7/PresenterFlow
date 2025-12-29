@@ -20,7 +20,7 @@ PresenterFlow是一个专为Unity设计的快速实现组件绑定的轻量级�
 ### 📦 安装
 
 #### 方式一：Unity Package (推荐)
-1. 下载最新 .unitypackage 从[Releases](https://github.com/kukuni8/PresenterFlow/releases)页面
+1. 下载最新 .unitypackage 从[Releases](https://github.com/FCheng7/PresenterFlow/releases)页面
 2. 导入 Unity 项目： Assets > Import Package > Custom Package...
 
 ### 初始化配置
