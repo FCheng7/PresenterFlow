@@ -20,7 +20,7 @@ PresenterFlow是一个专为Unity设计的快速实现组件绑定的轻量级�
 ### 📦 安装
 
 #### 方式一：Unity Package (推荐)
-1. 下载最新 .unitypackage 从[Releases](https://github.com/FCheng7/PresenterFlow/releases)页面
+1. 下载最新 .unitypackage 从[Releases](https://github.com/kukuni8/PresenterFlow/releases)页面
 2. 导入 Unity 项目： Assets > Import Package > Custom Package...
 
 ### 初始化配置
@@ -39,9 +39,10 @@ PresenterFlow是一个专为Unity设计的快速实现组件绑定的轻量级�
 6. 点击 Hierarchy 中的 Generate 按钮，框架自动创建  Assets/Scripts/Generated/Views/CubeView.cs
 7. 创建 CubePresenter.cs 文件，内容如下：
 ~~~csharp
-    [ViewType(typeof(CubeView))]  //一定要标记这个特性
-    public partial class CubePresenter : BasePresenter //必须是partial类，必须继承自BasePresenter
+    public class CubePresenter : BasePresenter //继承自BasePresenter
     {
+        public CubeView View => GetView<CubeView>();
+        
         private void Awake()
         {
             Debug.Log($"{View.Cube_BoxCollider.name}");// 在这里就可以访问刚才绑定的组件
